@@ -40,11 +40,9 @@ kind: Service
 metadata:
   name: dev-service
 spec:
-selector:
-      app: nginx
-    type: NodePort
   ports:
   - protocol: TCP
     port: 80
     targetPort: 80
-    nodePort:
+  selector:
+    app: nginx 
